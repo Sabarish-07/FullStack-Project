@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internlink</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>INTERNLINK</h1>
+        <div class="navlinks">
+            <p class="navlink"><a href="index.html">Home</a></p>
+            <p class="navlink"><a href="search.html">Search</a></p>
+            <p class="navlink"><a href="add.html">Add Intern</a></p>
+            <p class="navlink"><a href="adduser.html">Add User</a></p>
+            <p class="navlink"><a href="login.html">Log Out</a></p>
+        </div>
+        <div class="navbartoggle" onclick="shownav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="sidenavbar">
+        <p class="xmark" onclick="closenav()"><i class="fa-solid fa-xmark"></i></p>
+        <p class="sidenavlink"><a href="index.html">Home</a></p>
+        <p class="sidenavlink"><a href="search.html">Search</a></p>
+        <p class="sidenavlink"><a href="adduser.html">Add User</a></p>
+        <p class="sidenavlink"><a href="add.html">Add Intern</a></p>
+        <p class="sidenavlink"><a href="login.html">Log Out</a></p>
+    </div>
+
+    <div class="welcome">
+        <div class="welcometext">
+            <h2>WELCOME TO INTERNLINK</h2>
+            <h3>-Your Intern Data Management System</h3>
+            <p>Your go-to solution for managing and organizing intern data efficiently. Track intern data, monitor team
+                distributions, and stay updated —all in one place. INTERNLINK provides a seamless experience to ensure
+                your intern management is always on point</p>
+        </div>
+        <div class="welcomeimage">
+            <img src="bannariamman.jpg">
+        </div>
+    </div>
+
+
+    <h2 class="keymetrics">KEY METRICS:</h2>
+    <div class="metricscontainer">
+        
+        <div class="metricsbox">
+            <i class="fa-solid fa-user"></i>
+            <p><b>Total No. Of Active Interns:</b></p>
+            <p><b>140</b></p>
+            
+        </div>
+
+        <div class="metricsbox">
+            <i class="fa-solid fa-venus-mars"></i>
+            <p><b>No. Of Male Interns:</b> 80</p>
+            <p><b>No. Of Female Interns:</b> 60</p>
+            
+        </div>
+
+        <div class="metricsbox">
+            <i class="fa-solid fa-arrow-down-up-across-line"></i>
+            <p><b>No. Of Interns Starting This Month:</b> 12</p>
+            <p><b>No. Of Interns Leaving This Month:</b> 14</p>
+            
+        </div>
+    </div>
+    <h2 class="chartheading">TEAM-WISE INTERN ALLOCATION:</h2>    
+    <div class="charts">
+
+
+        <div class="doughnutchart">
+            <h2>TEAMS</h2>
+            <canvas id="doughnut"></canvas>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>© 2024 INTERNLINK. All rights reserved.</p>
+        <p>INTERNLINK is a comprehensive platform for managing and organizing intern data efficiently.</p>
+        <p><b>Quick Links:</b></p>
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Contact Us</a>
+        <a>Feedback</a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+</body>

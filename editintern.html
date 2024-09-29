@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internlink</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>INTERNLINK</h1>
+        <div class="navlinks">
+            <p class="navlink"><a href="index.html">Home</a></p>
+            <p class="navlink"><a href="search.html">Search</a></p>
+            <p class="navlink"><a href="add.html">Add Intern</a></p>
+            <p class="navlink"><a href="adduser.html">Add User</a></p>
+            <p class="navlink"><a href="login.html">Log Out</a></p>
+        </div>
+        <div class="navbartoggle" onclick="shownav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="sidenavbar">
+        <p class="xmark" onclick="closenav()"><i class="fa-solid fa-xmark"></i></p>
+        <p class="sidenavlink"><a href="index.html">Home</a></p>
+        <p class="sidenavlink"><a href="search.html">Search</a></p>
+        <p class="sidenavlink"><a href="adduser.html">Add User</a></p>
+        <p class="sidenavlink"><a href="add.html">Add Intern</a></p>
+        <p class="sidenavlink"><a href="login.html">Log Out</a></p>
+    </div>
+
+   
+    <div class="addintern">
+        <h1>Edit Intern</h1>
+        <form action="/submit-intern" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>General Details</legend>
+                
+                <div class="photo-upload">
+                    <label for="photo">Upload Photo:</label>
+                    <div class="photobox" id="photobox">
+                        <img src="Raina.jpg" style="width:150px; height:150px; border-radius:8px">
+                    </div>
+                    <div class="input-item">
+                        <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
+                        <label for="photo">Choose File</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" value="Arjun">
+                    </div>
+                    <div class="input-item">
+                        <label for="middle-name">Middle Name:</label>
+                        <input type="text" id="middle-name" name="middle-name" value="Krishnan">
+                    </div>
+                    <div class="input-item">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" value="S">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="intern-id">Intern ID:</label>
+                        <input type="text" id="intern-id" name="intern-id" required value="INT001">
+                    </div>
+                    <div class="input-item">
+                        <label for="team">Team:</label>
+                        <select id="team" name="team" required >
+                            <option value="Select a Team">Select A Team</option>
+                            <option value="Rewards Team" selected>Rewards Team</option>
+                            <option value="Skill Team">Skill Team</option>
+                            <option value="Academics">Academics</option>
+                            <option value="T&P">T&P</option>
+                            <option value="R&D">R&D</option>
+                            <option value="PIC">PIC</option>
+                        </select>
+                    </div>
+                    <div class="input-item">
+                        <label for="mobile-number">Mobile Number:</label>
+                        <input type="tel" id="mobile-number" name="mobile-number" required value="9876543210">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                    <label for="altMobileNumber">Alternate Mobile Number:</label>
+                    <input type="tel" id="altMobileNumber" name="altMobileNumber" value="1234567890">
+                    </div>
+                    <div class="input-item">
+                        <label for="personalEmail">Personal Email ID:</label>
+                    <input type="email" id="personalEmail" name="personalEmail" required value="arjun.krishnan@example.com">
+                    </div>
+                    <div class="input-item">
+                        <label for="institutionEmail">Institution Email ID:</label>
+                    <input type="email" id="institutionEmail" name="institutionEmail" required value="arjun.krishnan@bitsathy.ac.in">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="reportingHead">Reporting Head:</label>
+                        <input type="text" id="reportingHead" name="reportingHead" required value="Ms.Smith">
+                    </div>
+                    <div class="input-item">
+                        <label for="stipend">Stipend:</label>
+                    <input type="number" id="stipend" name="stipend" value="5000">
+                    </div>
+                    <div class="input-item">
+                        <label for="workingDuration">Working Duration (in months):</label>
+                        <input type="number" id="workingDuration" name="workingDuration" required value="6">
+                    </div>
+                </div>
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required value="2024-08-27">
+                    </div>
+                    <div class="input-item">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-item">
+                        <label for="nationality">Nationality:</label>
+                        <input type="text" id="nationality" name="nationality" required value="India">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" require value="24">
+                    </div>
+                    <div class="input-item">
+                        <label for="fatherName">Father's Name:</label>
+                    <input type="text" id="fatherName" name="fatherName" required value="Rajesh">
+                    </div>
+                    <div class="input-item">
+                        <label for="motherName">Mother's Name:</label>
+                    <input type="text" id="motherName" name="motherName" required value="Sita">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="fatherOccupation">Father's Occupation:</label>
+                    <input type="text" id="fatherOccupation" name="fatherOccupation" required value="Teacher">
+                    </div>
+                    <div class="input-item">
+                        <label for="motherOccupation">Mother's Occupation:</label>
+                    <input type="text" id="motherOccupation" name="motherOccupation" required value="Doctor">
+                    </div>
+                    <div class="input-item">
+                        <label for="bloodGroup">Blood Group:</label>
+                    <input type="text" id="bloodGroup" name="bloodGroup" required value="O+">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="currentAddress">Current Address:</label>
+                    <textarea id="currentAddress" name="currentAddress" >123 Main St, City</textarea>
+                    </div>
+                    <div class="input-item">
+                        <label for="permanentAddress">Permanent Address:</label>
+                    <textarea id="permanentAddress" name="permanentAddress" >56 Side St, Town</textarea>
+                    </div>
+                </div>
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Educational Details</legend>
+                
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="10thSchoolName">School Name:(10th Grade)</label>
+                    <input type="text" id="10thSchoolName" name="10thSchoolName" required value="ABC School">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="10thPercentage">10th Grade Percentage:</label>
+                    <input type="number" id="10thPercentage" name="10thPercentage" step="0.01" required value="85">
+                    </div>
+                    
+                    <div class="input-item">
+                        <label for="yearOfPassing10th">Year of Passing (10th Grade):</label>
+                    <input type="number" id="yearOfPassing10th" name="yearOfPassing10th" required value="2018">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="12thSchoolName">School Name:(12th Grade)</label>
+                    <input type="text" id="12thSchoolName" name="12thSchoolName" required value="ABC School">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="12thPercentage">12th Grade Percentage:</label>
+                    <input type="number" id="12thPercentage" name="12thPercentage" step="0.01" required value="95">
+                    </div>
+                    
+                    <div class="input-item">
+                        <label for="yearOfPassing12th">Year of Passing (12th Grade):</label>
+                    <input type="number" id="yearOfPassing12th" name="yearOfPassing12th" required value="2020">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="ugCollegeName">UG College Name:</label>
+                    <input type="text" id="ugCollegeName" name="ugCollegeName" value="XYZ College">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="ugDegree">UG Degree:</label>
+                        <input type="text" id="ugDegree" name="ugDegree" value="B.Tech">
+                    </div>
+                    
+                    <div class="input-item">
+                        <label for="ugCourse">UG Course:</label>
+                    <input type="text" id="ugCourse" name="ugCourse" value="EEE">
+                    </div>
+
+                    <div class="input-item">
+                        <label for="ugCgpa">UG CGPA:</label>
+                    <input type="number" id="ugCgpa" name="ugCgpa" step="0.01" value="8.5">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="pgCollegeName">PG College Name (Optional):</label>
+                    <input type="text" id="pgCollegeName" name="pgCollegeName">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="pgDegree">PG Degree (Optional):</label>
+                    <input type="text" id="pgDegree" name="pgDegree">
+                    </div>
+                    
+                    <div class="input-item">
+                        <label for="pgCourse">PG Course (Optional):</label>
+                        <input type="text" id="pgCourse" name="pgCourse">
+                    </div>
+
+                    <div class="input-item">
+                        <label for="pgCgpa">PG CGPA (Optional):</label>
+                        <input type="number" id="pgCgpa" name="pgCgpa" step="0.01">
+                    </div>
+                    
+                </div>
+
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience(If Any)</legend>
+                
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="previous-company">Previous Company:</label>
+                        <input type="text" id="previous-company" name="previous-company" value="ABC Crops">
+                    </div>
+                    <div class="input-item">
+                        <label for="job-title">Job Title:</label>
+                        <input type="text" id="job-title" name="job-title" value="Intern">
+                    </div>
+                    <div class="input-item">
+                        <label for="years-of-experience">Years of Experience:</label>
+                        <input type="number" id="years-of-experience" name="years-of-experience" value="0.5">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Resume Upload</legend>
+                
+                <div class="input-item">
+                    <label for="resume">Upload Resume:</label>
+                    <a id="resume" href="resume.pdf" target="_blank">View Resume</a>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="input-item">
+                    <label for="linkedin">Linked In Profile URL:</label>
+                    <input type="url" id="linkedin" name="linkedin" accept="url" value="https://linkedin.com/in/arjunkrishnan">
+                </div>
+            </fieldset>
+
+            <button onclick="location.href='view.html'">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="footer">
+        <p>© 2024 INTERNLINK. All rights reserved.</p>
+        <p>INTERNLINK is a comprehensive platform for managing and organizing intern data efficiently.</p>
+        <p><b>Quick Links:</b></p>
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Contact Us</a>
+        <a>Feedback</a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+</body>

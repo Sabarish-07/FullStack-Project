@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internlink</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+    <div class="navbar">
+        <h1>INTERNLINK</h1>
+        <div class="navlinks">
+            <p class="navlink"><a href="user-index.html">Home</a></p>
+            <p class="navlink"><a href="user-search.html">Search</a></p>
+            <p class="navlink"><a href="login.html">Log Out</a></p>
+        </div>
+        <div class="navbartoggle" onclick="shownav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="sidenavbar">
+        <p class="xmark" onclick="closenav()"><i class="fa-solid fa-xmark"></i></p>
+        <p class="sidenavlink"><a href="user-index.html">Home</a></p>
+        <p class="sidenavlink"><a href="user-search.html">Search</a></p>
+        <p class="sidenavlink"><a href="login.html">Log Out</a></p>
+    </div>
+
+
+    <div class="viewintern">
+        <h2>Intern Details</h2>
+        <div class="intern-details">
+            <fieldset>
+                <legend>General Details</legend>
+                <div class="detail-row">
+                    <div class="detail-photo">
+                        <label for="photo">Photo:</label>
+                        <img id="photo" src="Raina.jpg" alt="Intern Photo" class="photo-view">
+                    </div>
+                    <div class="detail-item">
+                        <label for="firstName">First Name:</label>
+                        <p id="firstName">Arjun</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="middleName">Middle Name:</label>
+                        <p id="middleName">Krishnan</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="lastName">Last Name:</label>
+                        <p id="lastName">S</p>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="internId">Intern ID:</label>
+                        <p id="internId">INT001</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="team">Team:</label>
+                        <p id="team">Rewards Team</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="mobileNumber">Mobile Number:</label>
+                        <p id="mobileNumber">1234567890</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="alternateMobileNumber">Alternate Mobile Number:</label>
+                        <p id="alternateMobileNumber">0987654321</p>
+                    </div>
+                    </div>
+                    <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="personalMail">Personal Mail ID:</label>
+                        <p id="personalMail">arjun.krishnan@example.com</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="institutionMail">Institution Mail ID:</label>
+                        <p id="institutionMail">arjun.krishnan@bitsathy.ac.in</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="reportingHead">Reporting Head:</label>
+                        <p id="reportingHead">Ms. Smith</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="stipend">Stipend:</label>
+                        <p id="stipend">₹5000</p>
+                    </div>
+                    </div>
+                    
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Interview Details</legend>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="interview-date">Date of Interview:</label>
+                        <p>01-08-2024</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="joining-date">Date of Joining:</label>
+                        <p>10-08-2024</p>
+                    </div>
+              
+                    <div class="detail-item">
+                        <label for="selection-status">Selection Status:</label>
+                        <p>Selected</p>
+                    </div>
+
+                    <div class="detail-item">
+                        <label for="working-status">Working Status:</label>
+                        <p>Active</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Details</legend>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="fatherName">Father's Name:</label>
+                        <p id="fatherName">Rajesh</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="motherName">Mother's Name:</label>
+                        <p id="motherName">Sita</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="fatherOccupation">Father's Occupation:</label>
+                        <p id="fatherOccupation">Teacher</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="motherOccupation">Mother's Occupation:</label>
+                        <p id="motherOccupation">Doctor</p>
+                    </div>
+                    </div>
+                    <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="gender">Gender:</label>
+                        <p id="gender">Male</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="dob">Date of Birth:</label>
+                        <p id="dob">01-01-2000</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="age">Age:</label>
+                        <p id="age">24</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="bloodGroup">Blood Group:</label>
+                        <p id="bloodGroup">O+</p>
+                    </div>
+                    </div>
+                    <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="currentAddress">Current Address:</label>
+                        <p id="currentAddress">123 Main St, City</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="permanentAddress">Permanent Address:</label>
+                        <p id="permanentAddress">456 Side St, Town</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="linkedinProfile">LinkedIn Profile:</label>
+                        <p id="linkedinProfile"><a href="https://linkedin.com/in/arjunkrishnan" target="_blank">linkedin.com/in/arjunkrishnan</a></p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="emergencyContact">Emergency Contact Details:</label>
+                        <p id="emergencyContact">9876543210</p>
+                    </div>
+                    </div>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>School Details</legend>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="10thSchoolName">10th Grade School Name:</label>
+                        <p id="firstSchoolName">ABC School</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="10thPercentage">10th Grade Percentage:</label>
+                        <p id="sslcPercentage">85%</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="10thpassYear">10th Grade Year of Passing:</label>
+                        <p id="10thpassYear">2018</p>
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="12thSchoolName">12th Grade School Name:</label>
+                        <p id="firstSchoolName">ABC School</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="12thPercentage">12th Grade Percentage:</label>
+                        <p id="12thPercentage">95%</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="12thpassYear">12th Grade Year of Passing:</label>
+                        <p id="12thpassYear">2020</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Undergraduate (UG) Details</legend>
+                <div class="detail-row" >
+                    <div class="detail-item">
+                        <label for="collegeNameUG">Name of College:</label>
+                        <p id="collegeNameUG">XYZ College</p>
+                    </div>
+                    
+                    
+                    <div class="detail-item">
+                        <label for="yearPassingUG">Year of Passing:</label>
+                        <p id="yearPassingUG">2022</p>
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="courseUG">Course:</label>
+                        <p id="courseUG">B.Tech</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="degreeUG">Degree:</label>
+                        <p id="degreeUG">Electrical Engineering</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="cgpaUG">CGPA:</label>
+                        <p id="cgpaUG">8.5</p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Postgraduate (PG) Details (Optional)</legend>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="collegeNamePG">Name of College:</label>
+                        <p id="collegeNamePG">Not Applicable</p>
+                    </div>
+                    <div class="detail-item"></div>
+                    <div class="detail-item">
+                        <label for="yearPassingPG">Year of Passing:</label>
+                        <p id="yearPassingPG">N/A</p>
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="coursePG">Course:</label>
+                        <p id="coursePG">N/A</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="degreePG">Degree:</label>
+                        <p id="degreePG">N/A</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="cgpaPG">CGPA:</label>
+                        <p id="cgpaPG">N/A</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience Details</legend>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="workExperience">Work Experience:</label>
+                        <p id="workExperience">Intern at ABC Corp (6 Months)</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Resume</legend>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="resume">Resume:</label>
+                        <a id="resume" href="resume.pdf" target="_blank">View Resume</a>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Details</legend>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <label for="attendancePercentage">Attendance Percentage:</label>
+                        <p id="attendancePercentage">95%</p>
+                    </div>
+                    <div class="detail-item">
+                        <label for="workDuration">Work Duration:</label>
+                        <p id="workDuration">6 Months</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

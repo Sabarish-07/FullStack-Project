@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internlink</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>INTERNLINK</h1>
+        <div class="navlinks">
+            <p class="navlink"><a href="user-index.html">Home</a></p>
+            <p class="navlink"><a href="user-search.html">Search</a></p>
+            <p class="navlink"><a href="login.html">Log Out</a></p>
+        </div>
+        <div class="navbartoggle" onclick="shownav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="sidenavbar">
+        <p class="xmark" onclick="closenav()"><i class="fa-solid fa-xmark"></i></p>
+        <p class="sidenavlink"><a href="user-index.html">Home</a></p>
+        <p class="sidenavlink"><a href="user-search.html">Search</a></p>
+        <p class="sidenavlink"><a href="login.html">Log Out</a></p>
+    </div>
+
+
+    <h2 class="searchhead">SEARCH</h2>
+    <div class="searchbox">
+        <div class="search">
+            <div>
+                <p>Name:</p>
+                <input type="text" id="searchName" placeholder="Name">
+            </div>
+            <div>
+                <p>Intern ID:</p>
+                <input type="text" id="searchID" placeholder="Intern ID">
+            </div>
+        </div>
+        <div class="filter">
+            <div>
+                <p>Team:</p>
+                <select id="searchTeam">
+                    <option value="">All</option>
+                    <option value="Skill Team">Skill Team</option>
+                    <option value="PIC">PIC</option>
+                    <option value="Academics">Academics</option>
+                    <option value="Rewards Team">Rewards Team</option>
+                    <option value="T&P">T&P</option>
+                    <option value="R&D">R&D</option>
+                </select>
+            </div>
+            <div>
+                <p>Gender:</p>
+                <select id="searchGender">
+                    <option value="">All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div>
+                <p>Working Status:</p>
+                <select id="searchStatus">
+                    <option value="">All</option>
+                    <option value="Active">Active</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="searchresults">
+        <div class="resulthead">
+            <p>Intern ID</p>
+            <p>Name</p>
+            <p>Team</p>
+            <p class="resultmail">E-Mail ID</p>
+            <p>Gender</p>
+            <p>Working Status</p>
+        </div>
+        <div class="searchdata" id="searchData">
+            <div class="user-result" >
+                <p>INT001</p>
+                <p>Arjun Krishnan</p>
+                <p>Rewards Team</p>
+                <p class="resultmail">arjun.krishnan@bitsathy.ac.in</p>
+                <p>Male</p>
+                <p>Active</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT002</p>
+                <p>Divya Subramanian</p>
+                <p>Rewards Team</p>
+                <p class="resultmail">divya.subramanian@bitsathy.ac.in</p>
+                <p>Female</p>
+                <p>Completed</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT003</p>
+                <p>Vikram Rajendran</p>
+                <p>Skill Team</p>
+                <p class="resultmail">vikram.rajendran@bitsathy.ac.in</p>
+                <p>Male</p>
+                <p>Active</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT004</p>
+                <p>Anjali Murugan</p>
+                <p>Skill Team</p>
+                <p class="resultmail">anjali.murugan@bitsathy.ac.in</p>
+                <p>Female</p>
+                <p>Pending</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT005</p>
+                <p>Ramesh Venkatesh</p>
+                <p>Academics</p>
+                <p class="resultmail">ramesh.venkatesh@bitsathy.ac.in</p>
+                <p>Male</p>
+                <p>Active</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT006</p>
+                <p>Karthik Srinivasan</p>
+                <p>Academics</p>
+                <p class="resultmail">karthik.srinivasan@bitsathy.ac.in</p>
+                <p>Male</p>
+                <p>Completed</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT007</p>
+                <p>Lakshmi Narayanan</p>
+                <p>T&P</p>
+                <p class="resultmail">lakshmi.narayanan@bitsathy.ac.in</p>
+                <p>Female</p>
+                <p>Active</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT008</p>
+                <p>Meera Balasubramani</p>
+                <p>T&P</p>
+                <p class="resultmail">meera.balasubramani@bitsathy.ac.in</p>
+                <p>Female</p>
+                <p>Pending</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT009</p>
+                <p>Suresh Kumar</p>
+                <p>R&D</p>
+                <p class="resultmail">suresh.kumar@bitsathy.ac.in</p>
+                <p>Male</p>
+                <p>Active</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT010</p>
+                <p>Nithya Shankar</p>
+                <p>R&D</p>
+                <p class="resultmail">nithya.shankar@bitsathy.ac.in</p>
+                <p>Female</p>
+                <p>Completed</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT011</p>
+                <p>Aravind Raj</p>
+                <p>PIC</p>
+                <p class="resultmail">aravind.raj@bitsathy.ac.in</p>
+                <p>Male</p>
+                <p>Pending</p>
+            </div>
+
+            <div class="user-result">
+                <p>INT012</p>
+                <p>Priya Sivakumar</p>
+                <p>PIC</p>
+                <p class="resultmail">priya.sivakumar@bitsathy.ac.in</p>
+                <p>Female</p>
+                <p>Completed</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>© 2024 INTERNLINK. All rights reserved.</p>
+        <p>INTERNLINK is a comprehensive platform for managing and organizing intern data efficiently.</p>
+        <p><b>Quick Links:</b></p>
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Contact Us</a>
+        <a>Feedback</a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+</body>
